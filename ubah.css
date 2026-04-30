@@ -3,3 +3,17 @@
     color: #C87D87;
     font-family: garamond, serif;
 }
+
+.navbar .navbar-brand {
+    color: #C87D87;
+    font-size:x-large;
+    font-weight: bold;
+}
+
+.navbar-nav {
+    color: #C87D87;
+    margin: 0 auto;
+    gap: 25px;
+    font-size: larger ;
+    font-weight: bold;
+}
