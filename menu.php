@@ -17,16 +17,16 @@
       <div class="collapse navbar-collapse" id="navbarScroll">
         <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#">Home</a>
+            <a class="nav-link" href="home.php">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Menu</a>
+            <a class="nav-link active" href="menu.php">Menu</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#">About</a>
+            <a class="nav-link" href="about.php">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#">Contact</a>
+            <a class="nav-link" href="contact.php">Contact</a>
           </li>
         </ul>
         <form class="d-flex" role="search">
@@ -38,14 +38,25 @@
       </div>
     </div>
   </nav>
-  <div class="card text-bg-dark">
-      <img src="..." class="card-img" alt="...">
-      <div class="card-img-overlay">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          <p class="card-text"><small>Last updated 3 mins ago</small></p>
+  <div class="container mt-4">
+      <div class="card text-bg-dark border-0">
+          <img src="menuu.jpeg" class="card-img-top" alt="menu">
+  
+          <div class="card-img-overlay text-center">
+              <h3 class="card-title mt-5 pt-5 fw-bold">Our Menu</h3>
+              <p class="card-text">Silahkan pilih menu</p>
+          </div>
       </div>
   </div>
+
+  <div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
     
 
 
