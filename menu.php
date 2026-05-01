@@ -17,16 +17,16 @@
       <div class="collapse navbar-collapse" id="navbarScroll">
         <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link" aria-current="page" href="#">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Menu</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">About</a>
+            <a class="nav-link" aria-current="page" href="#">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Contact</a>
+            <a class="nav-link" aria-current="page" href="#">Contact</a>
           </li>
         </ul>
         <form class="d-flex" role="search">
@@ -38,7 +38,21 @@
       </div>
     </div>
   </nav>
+  <div class="card text-bg-dark">
+      <img src="..." class="card-img" alt="...">
+      <div class="card-img-overlay">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="card-text"><small>Last updated 3 mins ago</small></p>
+      </div>
+  </div>
     
+
+
+
+
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
   </body>
 </html>
