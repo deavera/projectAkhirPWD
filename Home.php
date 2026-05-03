@@ -27,7 +27,7 @@
             <a class="nav-link active" aria-current="page" href="#">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Contact</a>
+            <a class="nav-link active" aria-current="page" href="#">User</a>
           </li>
         </ul>
         <form class="d-flex" role="search">
@@ -84,16 +84,71 @@
 
 <section class="about">
   <div class="container text-center">
+    <h1>Our Story</h1>
   <div class="row align-items-center">
     <div class="col-md-6">
       <img src="dapur.jpg" alt="dapur">
     </div>
     <div class="col-md-6">
-      <p Sejak 2018, kami menghadirkan pengalaman dessert yang tidak hanya lezat, tetapi juga berkesan. Dengan perpaduan bahan berkualitas, resep pilihan, dan sentuhan kreativitas, setiap produk kami dibuat untuk memberikan kepuasan terbaik. Kepercayaan pelanggan selama bertahun-tahun menjadi bukti komitmen kami dalam menjaga kualitas dan menghadirkan yang terbaik di setiap sajian.</p>
+      <p>Sejak 2018, kami menghadirkan pengalaman dessert yang tidak hanya lezat, tetapi juga berkesan. Dengan perpaduan bahan berkualitas, resep pilihan, dan sentuhan kreativitas, setiap produk kami dibuat untuk memberikan kepuasan terbaik. Kepercayaan pelanggan selama bertahun-tahun menjadi bukti komitmen kami dalam menjaga kualitas dan menghadirkan yang terbaik di setiap sajian.</p>
+      <a href="https://www.startfriday.asia/ideas/top-toko-bakery-terkenal-di-indonesia-yang-wajib-fripipel-coba" class="btn" style="background-color: #C87D87; color: white;">Our Story</a>
     </div>
   </div>
 </div>
 </section>
+
+
+<section class="best">
+  <h1>Best Seller</h1>
+  <div class="row row-cols-1 row-cols-md-4 g-4">
+  <div class="col">
+    <div class="card shadow">
+      <img src="cake1.jpg" class="card-img-top" alt="cake1">
+      <div class="card-body">
+        <h5 class="card-title">Cheese Cake</h5>
+        <p class="card-text">Favorit karena teksturnya lembut dan creamy dengan rasa yang rich namun tetap seimbang.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card shadow">
+      <img src="icecream1.jpg" class="card-img-top" alt="icecream1">
+      <div class="card-body">
+        <h5 class="card-title">Cookies Ice Cream</h5>
+        <p class="card-text">Best seller karena perpaduan crunchy cookies dan ice cream dingin yang bikin nagih di setiap gigitan.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card shadow">
+      <img src="pudding1.jpg" class="card-img-top" alt="pudding1">
+      <div class="card-body">
+        <h5 class="card-title">Strawberry Pudding</h5>
+        <p class="card-text"> Disukai karena rasanya segar, manis alami, dan teksturnya yang ringan di mulut.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card shadow">
+      <img src="icecream1.jpg" class="card-img-top" alt="icecream1">
+      <div class="card-body">
+        <h5 class="card-title">Cookies Ice Cream</h5>
+        <p class="card-text">Best seller karena perpaduan crunchy cookies dan ice cream dingin yang bikin nagih di setiap gigitan.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="button-menu">
+  <button type="button" class="btn btn-custom">Explore Menu</button>
+</section>
+
+<footer class="footer">
+    <div class="container text-center">
+        <p>&copy; 2026 Dessert. All rights reserved.</p>
+    </div>
+</footer>
       
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
