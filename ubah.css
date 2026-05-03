@@ -17,3 +17,22 @@
     font-size: larger ;
     font-weight: bold;
 }
+
+
+.card-title{
+    font-weight: bold;
+    color: #8b6f47;
+}
+
+.menu-btn{
+    background-color: #6b7556;
+    border-radius: 25px;
+    width: 100%;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    display: block;
+    border: none;
+    margin-top: auto;
+    text-decoration: none;
+}
