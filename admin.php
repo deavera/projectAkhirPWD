@@ -24,10 +24,10 @@ include 'koneksi.php';
       <div class="collapse navbar-collapse" id="navbarScroll">
         <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
           <li class="nav-item">
-            <a class="nav-link" href="home.php">Home</a>
+            <a class="nav-link active" href="home1.php">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="menu.php">Menu</a>
+            <a class="nav-link" href="menu1.php">Menu</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="about.php">About</a>
