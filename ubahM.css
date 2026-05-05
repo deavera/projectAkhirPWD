@@ -1,0 +1,56 @@
+.navbar {
+    background-color: #FBEAD6;
+    color: #C87D87;
+    font-family: garamond, serif;
+}
+
+.navbar .navbar-brand {
+    color: #C87D87;
+    font-size:x-large;
+    font-weight: bold;
+}
+
+.navbar-nav {
+    color: #C87D87;
+    gap: 25px;
+    font-size: larger ;
+    font-weight: bold;
+}
+
+
+
+.card-title{
+    font-weight: bold;
+    color: #8b6f47;
+}
+
+.menu-btn{
+    background-color: #6b7556;
+    border-radius: 25px;
+    width: 100%;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    display: block;
+    border: none;
+    margin-top: auto;
+    text-decoration: none;
+}
+
+
+.gambar-order {
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    max-height: 360px;
+    object-fit: cover;
+    width: 100%;
+}
+
+
+
+.gambar-about {
+    border-radius: 12px;
+    object-fit: cover;
+    max-height: 500px;
+    width: 100%;
+}
