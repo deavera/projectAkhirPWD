@@ -106,11 +106,6 @@ button.btn.btn-custom:hover {
 }
 
 
-
-.login {
-    padding: 50px;
-}
-
 .welcome {
     font-family: 'NostalgicLetter', serif;
     color: white;
@@ -129,62 +124,9 @@ button.btn.btn-custom:hover {
     padding-top: 20px;
 }
 
-.login .card {
-    width: 400px;
-    margin: 50px auto;
-    padding: 30px;
-    border-radius: 20px;
-    background-color: #FBEAD6;
-}
-
-.login .btn-primary {
-    background-color: #C87D87;
-    border-color: #C87D87;
-}
-
-.login .btn-primary:hover {
-    background-color: #6e4349;
-    border-color: #6e4349;
-}
 
 
-
-
-.register {
-    padding: 50px;
-}
-
-.register .card {
-    width: 500px;
-    margin: 50px auto;
-    padding: 30px;
-    border-radius: 20px;
-    background-color: #FBEAD6;
-}
-
-
-
-
-.dashboard {
-    padding: 30px;
-    background-color: #FBEAD6;
-    color: #C87D87;
-    margin: 30px;
-    border-radius: 50px;
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.pilihan {
-    text-align: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
-
-
-
-.login {
+.daftar {
     background-image: url('bg3.jpg');
     background-size: cover;
     background-position: center;
@@ -197,6 +139,93 @@ button.btn.btn-custom:hover {
     background-blend-mode: overlay;
 
 }
+
+.daftar {
+    padding: 50px;
+}
+
+.daftar .card {
+    width: 450px;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 20px;
+    background-color: #FBEAD6;
+    transition: 0.3s; 
+}
+
+.daftar .card:hover {
+    transform: scale(1.02); 
+}
+
+.daftar .btn-primary {
+    background-color: #C87D87;
+    border-color: #C87D87;
+    display: block;
+    margin-left: auto;
+    transition: 0.3s;
+}
+
+.daftar .btn-primary:hover {
+    background-color: #6e4349;
+    border-color: #6e4349;
+    transform: scale(1.05);
+}
+
+.daftar .form-control:focus {
+    border-color: #C87D87;    
+    box-shadow: 0 0 0 3px rgba(200, 125, 135, 0.2);
+}
+
+
+
+
+
+.dashboard {
+    padding: 30px;
+    background-color: #FBEAD6;
+    color: #C87D87;
+    text-align: center;
+    margin: 50px 70px;
+}
+
+body {
+    background-color: white;
+}
+
+.pilihan {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.pilihan .btn-primary {
+    background-color: #6B7556;
+    border-color: #6B7556;
+    margin: 5px;
+    transition: 0.3s;
+}
+
+.pilihan .btn-primary:hover {
+    background-color: #6B7556;
+    border-color: #6B7556;
+    transform: scale(1.05);
+}
+
+.pilihan .btn-danger {
+    background-color: #C87D87;
+    border-color: #C87D87;
+    margin: 5px;
+    transition: 0.3s;
+}
+
+.pilihan .btn-danger:hover {
+    background-color: #6e4349;
+    border-color: #6e4349;
+    transform: scale(1.05);
+}
+
+
+
 
 
 

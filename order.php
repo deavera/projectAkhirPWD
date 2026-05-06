@@ -1,9 +1,18 @@
 <?php
+session_start();
+include 'koneksi.php';
+
+if(!isset($_SESSION['id'])){
+    header('location: login.php');
+    exit();
+}
+
 $nama = $_GET['nama'];
 $harga = $_GET['harga'];
 $gambar = $_GET['gambar'];
 $keterangan = $_GET['keterangan'];
 ?>
+
 
 <!doctype html>
 <html lang="en">
@@ -59,17 +68,26 @@ $keterangan = $_GET['keterangan'];
       <p><?php echo $keterangan; ?></p>
       <hr>
 
+      
       <?php if(isset($_POST['jumlah'])){
-        $jumlah = $_POST['jumlah'];
-        $total = $harga * $jumlah;
+    $jumlah = $_POST['jumlah'];
+    $total = $harga * $jumlah;
 
-        $diskon = 0;
-        if($total > 50000){
-          $diskon = 5000;
-        }
+    $diskon = 0;
+    if($total > 50000){
+        $diskon = 5000;
+    }
 
-        $bayar = $total - $diskon;
-      ?>
+    $bayar = $total - $diskon;
+
+    // ✅ Tambahkan ini
+    if(isset($_SESSION['id'])){
+        $id_user = $_SESSION['id'];
+        $tanggal = date('Y-m-d H:i:s');
+        mysqli_query($koneksi, "INSERT INTO orders (id_user, nama_produk, jumlah, total_harga, status, tanggal_order) 
+                                VALUES ('$id_user', '$nama', '$jumlah', '$bayar', 'pending', '$tanggal')");
+    }
+    ?>
 
         <!-- Ringkasan setelah pesan -->
         <div class="card p-3 mb-3">

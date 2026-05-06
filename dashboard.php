@@ -1,10 +1,14 @@
 <?php
 session_start();
+include 'koneksi.php';
 
 if (!isset($_SESSION['logged_in'])) {
     header('location: login.php');
     exit();
 }
+
+$id_user = $_SESSION['id'];
+$query_orders = mysqli_query($koneksi, "SELECT * FROM orders WHERE id_user = '$id_user' ORDER BY tanggal_order DESC");
 ?>
 
 <!doctype html>
@@ -13,8 +17,8 @@ if (!isset($_SESSION['logged_in'])) {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Dessert</title>
-    <link rel="stylesheet" href="ubahvera.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="ubahvera.css">
   </head>
   <body>
 
@@ -53,9 +57,9 @@ if (!isset($_SESSION['logged_in'])) {
 
 <section class="informasi">
   <div class="container text-center">
-  <div class="row align-items-center justify-content-center">
+  <div class="row align-items-stretch">
     <div class="col-md-6">
-      <div class="card p-3">
+      <div class="card p-3 h-100">
         <h5>Informasi Akun</h5>
         <table class="table">
         <tbody>
@@ -79,9 +83,38 @@ if (!isset($_SESSION['logged_in'])) {
       </table>
       </div>
     </div>
+
+    <div class="col-md-6">
+          <div class="card p-3 h-100">
+            <h5>Riwayat Pesanan</h5>
+ 
+            <?php if (mysqli_num_rows($query_orders) > 0): ?>
+              <?php while ($order = mysqli_fetch_assoc($query_orders)): ?>
+                <div class="d-flex justify-content-between align-items-center border-bottom py-2">
+                  <div>
+                    <strong><?php echo $order['nama_produk']; ?></strong><br>
+                    <small class="text-muted">
+                      <?php echo $order['jumlah']; ?>x &middot; Rp <?php echo number_format($order['total_harga'], 0, ',', '.'); ?>
+                    </small>
+                  </div>
+                  <?php
+                    if ($order['status'] == 'done') $badge = 'success';
+                    elseif ($order['status'] == 'pending') $badge = 'warning';
+                    else $badge = 'primary';
+                  ?>
+                  <span class="badge bg-<?php echo $badge; ?>"><?php echo $order['status']; ?></span>
+                </div>
+              <?php endwhile; ?>
+            <?php else: ?>
+              <p class="text-muted">Belum ada pesanan.</p>
+            <?php endif; ?>
+ 
+          </div>
+        </div>
+    
+      </div>
     </div>
-  </div>
-</div>
+  </section>
 </section>
 
 <section class="pilihan">

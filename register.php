@@ -59,7 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   </nav>
 
 
-<section class="register">
+<section class="daftar">
     <h1 class="welcome">Welcome to Dessert</h1>
     <p class="deskripsi">We resigned our side to make shopping with us better!"</p>
     <div class="card">
