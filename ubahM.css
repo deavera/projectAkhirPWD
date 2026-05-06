@@ -97,3 +97,36 @@
     color: #8b6f47;
     margin-top: 40px;
 }
+
+
+.pilihan {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.pilihan .btn-primary {
+    background-color: #6B7556;
+    border-color: #6B7556;
+    margin: 5px;
+    transition: 0.3s;
+}
+
+.pilihan .btn-primary:hover {
+    background-color: #6B7556;
+    border-color: #6B7556;
+    transform: scale(1.05);
+}
+
+.pilihan .btn-danger {
+    background-color: #C87D87;
+    border-color: #C87D87;
+    margin: 5px;
+    transition: 0.3s;
+}
+
+.pilihan .btn-danger:hover {
+    background-color: #6e4349;
+    border-color: #6e4349;
+    transform: scale(1.05);
+}

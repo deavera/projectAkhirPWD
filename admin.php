@@ -1,6 +1,11 @@
 <?php
 session_start();
 include 'koneksi.php';
+
+if(!isset($_SESSION['logged_in']) || $_SESSION['role'] !== 'admin'){
+    header('location: login.php');
+    exit();
+}
 ?>
 
 <!doctype html>
@@ -124,6 +129,10 @@ include 'koneksi.php';
     </div>
 
   </div>
+  <section class="pilihan">
+  <a href="menu1.php" class="btn btn-primary">Lihat Menu</a>
+  <a href="logout.php" class="btn btn-danger">Logout</a>
+</section> 
 
   <footer class="footer">
     <div class="container text-center">

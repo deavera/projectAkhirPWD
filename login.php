@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         if ($data['role'] == 'admin') {
             header('location: admin.php');
         } else {
-            header('location: dashboard.php');
+            header('location: menu1.php');
         }
         exit();
     } else {
@@ -68,7 +68,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </div>
   </nav>
 
-
 <section class="daftar">
     <h1 class="welcome">Welcome to Dessert</h1>
     <p class="deskripsi">We resigned our side to make shopping with us better!"</p>
@@ -80,21 +79,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <?php endif; ?>
           <form method="POST" action="login.php">
             <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="email" name="email" required>
+                <label class="form-label">Email address</label>
+                <input type="email" class="form-control" name="email" required>
             </div>
             <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Password</label>
-                <input type="password" class="form-control" id="password" name="password" required>
+                <label class="form-label">Password</label>
+                <input type="password" class="form-control" name="password" required>
             </div>
             <button type="submit" class="btn btn-primary">Login</button>
           </form>
-
             <p class="text-center mt-2">Don't have an account? <a href="register.php">Register here</a></p>
         </div>
     </div>
 </section>
-
 
 <footer class="footer">
     <div class="container text-center">
