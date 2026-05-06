@@ -81,11 +81,10 @@ $keterangan = $_GET['keterangan'];
 
     // ✅ Tambahkan ini
     if(isset($_SESSION['id'])){
-        $id_user = $_SESSION['id'];
-        $tanggal = date('Y-m-d H:i:s');
-        mysqli_query($koneksi, "INSERT INTO orders (id_user, nama_produk, jumlah, total_harga, status, tanggal_order) 
-                                VALUES ('$id_user', '$nama', '$jumlah', '$bayar', 'pending', '$tanggal')");
-    }
+    $id_user = $_SESSION['id'];
+    $tanggal = date('Y-m-d');
+    mysqli_query($koneksi, "INSERT INTO pesanan (user_id, nama_produk, harga_satuan, jumlah, total, diskon, total_bayar, metode_bayar, tanggal) VALUES ('$id_user', '$nama', '$harga', '$jumlah', '$total', '$diskon', '$bayar', 'tunai', '$tanggal')");
+}
     ?>
 
         <!-- Ringkasan setelah pesan -->

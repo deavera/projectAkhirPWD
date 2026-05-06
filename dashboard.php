@@ -8,7 +8,7 @@ if (!isset($_SESSION['logged_in'])) {
 }
 
 $id_user = $_SESSION['id'];
-$query_orders = mysqli_query($koneksi, "SELECT * FROM orders WHERE id_user = '$id_user' ORDER BY tanggal_order DESC");
+$query_orders = mysqli_query($koneksi, "SELECT * FROM pesanan WHERE user_id = '$id_user' ORDER BY tanggal DESC");
 ?>
 
 <!doctype html>
@@ -87,26 +87,20 @@ $query_orders = mysqli_query($koneksi, "SELECT * FROM orders WHERE id_user = '$i
     <div class="col-md-6">
           <div class="card p-3 h-100">
             <h5>Riwayat Pesanan</h5>
- 
             <?php if (mysqli_num_rows($query_orders) > 0): ?>
-              <?php while ($order = mysqli_fetch_assoc($query_orders)): ?>
-                <div class="d-flex justify-content-between align-items-center border-bottom py-2">
-                  <div>
-                    <strong><?php echo $order['nama_produk']; ?></strong><br>
-                    <small class="text-muted">
-                      <?php echo $order['jumlah']; ?>x &middot; Rp <?php echo number_format($order['total_harga'], 0, ',', '.'); ?>
-                    </small>
-                  </div>
-                  <?php
-                    if ($order['status'] == 'done') $badge = 'success';
-                    elseif ($order['status'] == 'pending') $badge = 'warning';
-                    else $badge = 'primary';
-                  ?>
-                  <span class="badge bg-<?php echo $badge; ?>"><?php echo $order['status']; ?></span>
-                </div>
-              <?php endwhile; ?>
+                <?php while ($order = mysqli_fetch_assoc($query_orders)): ?>
+                    <div class="d-flex justify-content-between align-items-center border-bottom py-2">
+                        <div>
+                            <strong><?php echo $order['nama_produk']; ?></strong><br>
+                            <small class="text-muted">
+                                <?php echo $order['jumlah']; ?>x &middot; Rp <?php echo number_format($order['total_bayar'], 0, ',', '.'); ?>
+                            </small>
+                        </div>
+                        <small class="text-muted"><?php echo $order['tanggal']; ?></small>
+                    </div>
+                <?php endwhile; ?>
             <?php else: ?>
-              <p class="text-muted">Belum ada pesanan.</p>
+                <p class="text-muted">Belum ada pesanan.</p>
             <?php endif; ?>
  
           </div>
