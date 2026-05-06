@@ -17,7 +17,7 @@
       <div class="collapse navbar-collapse" id="navbarScroll">
         <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
           <li class="nav-item">
-            <a class="nav-link active" href="home1.php">Home</a>
+            <a class="nav-link" href="home1.php">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link active" href="menu1.php">Menu</a>
@@ -25,12 +25,14 @@
           <li class="nav-item">
             <a class="nav-link" href="about.php">About</a>
           </li>
-        </ul>
-        <ul class="navbar-nav nav-right my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
           <li class="nav-item">
-            <a class="nav-link" href="login.php">Login</a>
+            <a class="nav-link" href="contact.php">Contact</a>
           </li>
         </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
       </div>
     </div>
   </nav>
@@ -169,6 +171,11 @@
     </div>
   </div>
 </div>
+<footer class="footer">
+    <div class="container text-center">
+        <p>&copy; 2026 Dessert. All rights reserved.</p>
+    </div>
+</footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
   </body>
