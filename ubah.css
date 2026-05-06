@@ -6,7 +6,7 @@
 
 .navbar .navbar-brand {
     color: #C87D87;
-    font-size:x-large;
+    font-size: x-large;
     font-weight: bold;
 }
 
@@ -14,18 +14,16 @@
     color: #C87D87;
     margin: 0 auto;
     gap: 25px;
-    font-size: larger ;
+    font-size: larger;
     font-weight: bold;
 }
 
-
-
-.card-title{
+.card-title {
     font-weight: bold;
     color: #8b6f47;
 }
 
-.menu-btn{
+.menu-btn {
     background-color: #6b7556;
     border-radius: 25px;
     width: 100%;
@@ -38,16 +36,12 @@
     text-decoration: none;
 }
 
-
 .gambar-order {
     border-radius: 16px;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
     max-height: 360px;
     object-fit: cover;
     width: 100%;
 }
-
-
 
 .gambar-about {
     border-radius: 12px;
@@ -64,8 +58,6 @@
     margin-bottom: 12px;
 }
 
-
-
 .kotak-stat {
     border: none;
     border-radius: 16px;
@@ -76,7 +68,7 @@
     color: #C87D87;
     font-family: garamond, serif;
     font-weight: bold;
-    font-size: 3rem;
+    font-size: 48px;
 }
 
 .tulisan-stat {
@@ -96,25 +88,8 @@
     color: #8b6f47;
 }
 
-.label-pending {
-    background-color: #fff3cd;
-    color: #856404;
-    padding: 4px 10px;
-    border-radius: 20px;
-}
-
-.label-confirmed {
-    background-color: #cfe2ff;
-    color: #084298;
-    padding: 4px 10px;
-    border-radius: 20px;
-}
-
-.label-done {
-    background-color: #d1e7dd;
-    color: #0a3622;
-    padding: 4px 10px;
-    border-radius: 20px;
+.isi-halaman {
+    min-height: 500px;
 }
 
 .footer {

@@ -47,7 +47,6 @@
     </div>
   </div>
 
-  <!-- CUPCAKE -->
   <div class="container mt-4">
   <h2 class="text-center mb-4">Cupcake</h2>
   <div class="row">
@@ -89,7 +88,6 @@
   </div>
 </div>
 
-<!-- PUDDING -->
 <div class="container mt-4">
   <h2 class="text-center mb-4">Pudding</h2>
   <div class="row">
@@ -132,7 +130,6 @@
   </div>
 </div>
 
-<!-- CAKE -->
 <div class="container mt-4">
   <h2 class="text-center mb-4">Cake</h2>
   <div class="row">

@@ -106,8 +106,8 @@
       <p><b>Babarsari</b></p>
       <p>Jl. Babarsari No. 2, Tambak Bayan, Caturtunggal, Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281.</p>
       <hr>
-      <p>🕘 Buka dari 09.00 - 20.00</p>
-      <p>📞 0862527141619</p>
+      <p>Buka dari 09.00 - 20.00</p>
+      <p>0862527141619</p>
       <hr>
       <a href="https://www.google.com/maps/place/Upn+Veteran+Yogyakarta+Kampus,+Janti,+Caturtunggal,+Kec.+Depok,+Kabupaten+Sleman,+Daerah+Istimewa+Yogyakarta+55281/@-7.7823161,110.4134746,17z/data=!3m1!4b1!4m6!3m5!1s0x2e7a59f06c72b2f5:0xd4a4e0d9963c5e9c!8m2!3d-7.7823214!4d110.4160495!16s%2Fg%2F11qh31bsy6?entry=ttu&g_ep=EgoyMDI2MDQyOS4wIKXMDSoASAFQAw%3D%3D" class="menu-btn">Lokasi</a>
     </div>

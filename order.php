@@ -7,11 +7,11 @@ $keterangan = $_GET['keterangan'];
 
 <!doctype html>
 <html lang="en">
-<head>
+<head> 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Order - Dessert</title>
-  <link rel="stylesheet" href="ubahM.css">
+  <link rel="stylesheet" href="ubah.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
@@ -43,70 +43,63 @@ $keterangan = $_GET['keterangan'];
     </div>
   </nav>
 
-<!-- ISI HALAMAN -->
-<div class="container mt-5">
-  <div class="row align-items-start">
-
-    <!-- KIRI: Gambar produk -->
-    <div class="col-md-6 text-center">
-      <img src="<?php echo $gambar; ?>" class="img-fluid gambar-order">
-    </div>
-
-    <!-- KANAN: Detail produk -->
-    <div class="col-md-6 mt-3">
-      <h2><?php echo $nama; ?></h2>
-      <h4 class="text-danger">Rp <?php echo $harga; ?></h4>
-      <p><?php echo $keterangan; ?></p>
-      <hr>
-
-      <?php if(isset($_POST['jumlah'])){
-        $jumlah = $_POST['jumlah'];
-        $total = $harga * $jumlah;
-
-        $diskon = 0;
-        if($total > 50000){
-          $diskon = 5000;
-        }
-
-        $bayar = $total - $diskon;
-      ?>
-
-        <!-- Ringkasan setelah pesan -->
-        <div class="card p-3 mb-3">
-          <p class="mb-1">Jumlah Pesan: <b><?php echo $jumlah; ?></b></p>
-          <p class="mb-0">Total: <b class="text-danger">Rp <?php echo $total; ?></b></p>
-        </div>
-
-        <!-- Tombol lihat struk (Bootstrap modal) -->
-        <button type="button" class="menu-btn" data-bs-toggle="modal" data-bs-target="#modalStruk">
-          Lihat Struk
-        </button>
-
-        <a href="menu.php" class="menu-btn mt-2">
-          Kembali ke Menu
-        </a>
-
-      <?php } else { ?>
-
-        <!-- Form jumlah pesan -->
-        <form method="post">
-          <label class="fw-bold mb-1">Jumlah Pesan</label><br>
-          <input type="number" name="jumlah" class="form-control w-25" min="1" required>
-          <button type="submit" class="menu-btn mt-3">Pesan</button>
-        </form>
-
-      <?php } ?>
-
+  <div class="container mt-5">
+    <div class="row align-items-start">
+  
+      <div class="col-md-6 text-center">
+        <img src="<?php echo $gambar; ?>" class="img-fluid gambar-order">
+      </div>
+  
+      <div class="col-md-6 mt-3">
+        <h2><?php echo $nama; ?></h2>
+        <h4 class="text-danger">Rp <?php echo $harga; ?></h4>
+        <p><?php echo $keterangan; ?></p>
+        <hr>
+  
+        <?php if(isset($_POST['jumlah'])){
+          $jumlah = $_POST['jumlah'];
+          $total = $harga * $jumlah;
+  
+          $diskon = 0;
+          if($total > 50000){
+            $diskon = 5000;
+          }
+  
+          $bayar = $total - $diskon;
+        ?>
+  
+          <div class="card p-3 mb-3">
+            <p class="mb-1">Jumlah Pesan: <b><?php echo $jumlah; ?></b></p>
+            <p class="mb-0">Total: <b class="text-danger">Rp <?php echo $total; ?></b></p>
+          </div>
+  
+          <button type="button" class="menu-btn" data-bs-toggle="modal" data-bs-target="#modalStruk">
+            Lihat Struk
+          </button>
+  
+          <a href="menu.php" class="menu-btn mt-2">
+            Kembali ke Menu
+          </a>
+  
+        <?php } else { ?>
+  
+          <form method="post">
+            <label class="fw-bold mb-1">Jumlah Pesan</label><br>
+            <input type="number" name="jumlah" class="form-control w-25" min="1" required>
+            <button type="submit" class="menu-btn mt-3">Pesan</button>
+          </form>
+  
+        <?php } ?>
+  
+      </div>
     </div>
   </div>
-</div>
 <footer class="footer">
     <div class="container text-center">
         <p>&copy; 2026 Dessert. All rights reserved.</p>
     </div>
 </footer>
 
-<!-- MODAL STRUK (Bootstrap) -->
 <?php if(isset($_POST['jumlah'])){ ?>
 <div class="modal fade" id="modalStruk" tabindex="-1" aria-labelledby="labelStruk" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
