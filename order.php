@@ -25,28 +25,93 @@ $keterangan = $_GET['keterangan'];
 <body>
 
 <nav class="navbar navbar-expand-lg">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Dessert</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarScroll">
-      <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-        <li class="nav-item">
-          <a class="nav-link" href="home1.php">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" href="menu1.php">Menu</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="about.php">About</a>
-        </li>
-      </ul>
-      <ul class="navbar-nav nav-right my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-        <li class="nav-item">
-          <a class="nav-link" href="login.php">Login</a>
-        </li>
-      </ul>
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Dessert</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarScroll">
+        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+          <li class="nav-item">
+            <a class="nav-link" href="home1.php">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="menu1.php">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.php">About</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav nav-right my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+          <li class="nav-item">
+            <a class="nav-link" href="login.php">Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<!-- ISI HALAMAN -->
+<div class="container mt-5">
+  <div class="row align-items-start">
+
+    <!-- KIRI: Gambar produk -->
+    <div class="col-md-6 text-center">
+      <img src="<?php echo $gambar; ?>" class="img-fluid gambar-order">
+    </div>
+
+    <!-- KANAN: Detail produk -->
+    <div class="col-md-6 mt-3">
+      <h2><?php echo $nama; ?></h2>
+      <h4 class="text-danger">Rp <?php echo $harga; ?></h4>
+      <p><?php echo $keterangan; ?></p>
+      <hr>
+
+    <?php if(isset($_POST['jumlah'])){
+    $jumlah = $_POST['jumlah'];
+    $total = $harga * $jumlah;
+
+    $diskon = 0;
+    if($total > 50000){
+        $diskon = 5000;
+    }
+
+    $bayar = $total - $diskon;
+
+    // ✅ Tambahkan ini
+    if(isset($_SESSION['id'])){
+    $id_user = $_SESSION['id'];
+    $tanggal = date('Y-m-d');
+    mysqli_query($koneksi, "INSERT INTO pesanan (user_id, nama_produk, harga_satuan, jumlah, total, diskon, total_bayar, metode_bayar, tanggal) VALUES ('$id_user', '$nama', '$harga', '$jumlah', '$total', '$diskon', '$bayar', 'tunai', '$tanggal')");
+}
+    ?>
+
+        <!-- Ringkasan setelah pesan -->
+        <div class="card p-3 mb-3">
+          <p class="mb-1">Jumlah Pesan: <b><?php echo $jumlah; ?></b></p>
+          <p class="mb-0">Total: <b class="text-danger">Rp <?php echo $total; ?></b></p>
+        </div>
+
+        <!-- Tombol lihat struk (Bootstrap modal) -->
+        <button type="button" class="menu-btn" data-bs-toggle="modal" data-bs-target="#modalStruk">
+          Lihat Struk
+        </button>
+
+        <a href="menu.php" class="menu-btn mt-2">
+          Kembali ke Menu
+        </a>
+
+      <?php } else { ?>
+
+        <!-- Form jumlah pesan -->
+        <form method="post">
+          <label class="fw-bold mb-1">Jumlah Pesan</label><br>
+          <input type="number" name="jumlah" class="form-control w-25" min="1" required>
+          <button type="submit" class="menu-btn mt-3">Pesan</button>
+        </form>
+
+      <?php } ?>
+
     </div>
   </div>
 </nav>
