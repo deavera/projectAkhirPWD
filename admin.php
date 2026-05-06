@@ -32,9 +32,6 @@ include 'koneksi.php';
             <a class="nav-link" href="about.php">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="order.php">Orders</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="login.php">Login</a>
           </li>
           <li class="nav-item">
