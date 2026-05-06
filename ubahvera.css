@@ -4,6 +4,7 @@
 }
 
 
+/* Navbar */
 .navbar {
     background-color: #FBEAD6;
     color: #C87D87;
@@ -22,6 +23,8 @@
     font-weight: bold;
 }
 
+
+/* home */
 .about img {
   width: 350px;
   height: 300px;
@@ -99,13 +102,8 @@ button.btn.btn-custom:hover {
     color: #FBEAD6;
 }
 
-.footer {
-    background-color: #FBEAD6;
-    padding-top: 20px;
-    padding-bottom: 20px;   
-}
 
-
+/* login */
 .welcome {
     font-family: 'NostalgicLetter', serif;
     color: white;
@@ -125,7 +123,7 @@ button.btn.btn-custom:hover {
 }
 
 
-
+/* login & register */
 .daftar {
     background-image: url('bg3.jpg');
     background-size: cover;
@@ -178,8 +176,7 @@ button.btn.btn-custom:hover {
 
 
 
-
-
+/* dashboard */
 .dashboard {
     padding: 30px;
     background-color: #FBEAD6;
@@ -221,39 +218,7 @@ button.btn.btn-custom:hover {
 }
 
 
-
-
-
-
-
-
-
-.navbar {
-    background-color: #FBEAD6;
-    color: #C87D87;
-    font-family: garamond, serif;
-}
-
-.navbar .navbar-brand {
-    color: #C87D87;
-    font-size:x-large;
-    font-weight: bold;
-}
-
-.navbar-nav {
-    color: #C87D87;
-    gap: 25px;
-    font-size: larger ;
-    font-weight: bold;
-}
-
-
-.body {
-    background-color: #FBEAD6;
-}
-
-
-
+/* menu */
 .card-title{
     font-weight: bold;
     color: #8b6f47;
@@ -273,6 +238,7 @@ button.btn.btn-custom:hover {
 }
 
 
+/* about */
 .gambar-order {
     border-radius: 16px;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
@@ -280,7 +246,6 @@ button.btn.btn-custom:hover {
     object-fit: cover;
     width: 100%;
 }
-
 
 
 .gambar-about {
@@ -291,3 +256,54 @@ button.btn.btn-custom:hover {
 }
 
 
+/* order */
+.gambar-card {
+    border-radius: 8px;
+    object-fit: cover;
+    height: 200px;
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+
+/* admin */
+.kotak-stat {
+    border: none;
+    border-radius: 16px;
+    background-color: #FBEAD6;
+}
+
+.angka-stat {
+    color: #C87D87;
+    font-family: garamond, serif;
+    font-weight: bold;
+    font-size: 48px;
+}
+
+.tulisan-stat {
+    color: #8b6f47;
+    font-weight: bold;
+    margin: 0;
+}
+
+.judul-tabel {
+    color: #8b6f47;
+    font-family: garamond, serif;
+    font-weight: bold;
+}
+
+.kepala-tabel {
+    background-color: #FBEAD6;
+    color: #8b6f47;
+}
+
+.isi-halaman {
+    min-height: 500px;
+}
+
+
+/* footer */
+.footer {
+    background-color: #FBEAD6;
+    padding: 20px 0px;  
+}

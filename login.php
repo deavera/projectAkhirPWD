@@ -48,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarScroll">
-        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+        <ul class="navbar-nav mx-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
           <li class="nav-item">
             <a class="nav-link" href="home1.php">Home</a>
           </li>
@@ -57,6 +57,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
           </li>
           <li class="nav-item">
             <a class="nav-link" href="about.php">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="dashboard.php">Dashboard</a>
           </li>
         </ul>
         <ul class="navbar-nav nav-right my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">

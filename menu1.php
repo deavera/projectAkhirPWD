@@ -7,7 +7,7 @@ session_start();
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Dessert</title>
-    <link rel="stylesheet" href="ubahM.css">
+    <link rel="stylesheet" href="ubahvera.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   </head>
   <body>
@@ -18,7 +18,7 @@ session_start();
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarScroll">
-        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+        <ul class="navbar-nav mx-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
           <li class="nav-item">
             <a class="nav-link" href="home1.php">Home</a>
           </li>
@@ -28,11 +28,21 @@ session_start();
           <li class="nav-item">
             <a class="nav-link" href="about.php">About</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="dashboard.php">Dashboard</a>
+          </li>
         </ul>
         <ul class="navbar-nav nav-right my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-          <li class="nav-item">
-            <a class="nav-link" href="login.php">Login</a>
-          </li>
+          <?php if(isset($_SESSION['logged_in'])): ?>
+            <li class="nav-item">
+              <a class="nav-link" href="dashboard.php"><?php echo $_SESSION['nama']; ?></a>
+            </li>
+          <?php else: ?>
+            <li class="nav-item">
+              <a class="nav-link" href="login.php">Login</a>
+            </li>
+          <?php endif; ?>
+        </ul>
         </ul>
       </div>
     </div>

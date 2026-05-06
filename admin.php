@@ -14,7 +14,7 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['role'] !== 'admin'){
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Admin - Dessert</title>
-    <link rel="stylesheet" href="ubahM.css">
+    <link rel="stylesheet" href="ubahvera.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   </head>
   <body>
@@ -26,7 +26,7 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['role'] !== 'admin'){
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarScroll">
-        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+        <ul class="navbar-nav mx-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
           <li class="nav-item">
             <a class="nav-link" href="home1.php">Home</a>
           </li>
@@ -36,13 +36,12 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['role'] !== 'admin'){
           <li class="nav-item">
             <a class="nav-link" href="about.php">About</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="login.php">Login</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="admin.php">Admin</a>
-          </li>
-        </ul>
+          </ul>
+          <ul class="navbar-nav nav-right my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+            <li class="nav-item">
+              <a class="nav-link active" href="admin.php">Admin</a>
+            </li>
+          </ul>
       </div>
     </div>
   </nav>

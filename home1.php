@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -16,7 +18,7 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarScroll">
-        <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+        <ul class="navbar-nav mx-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
           <li class="nav-item">
             <a class="nav-link active" href="home1.php">Home</a>
           </li>
@@ -26,11 +28,20 @@
           <li class="nav-item">
             <a class="nav-link" href="about.php">About</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="dashboard.php">Dashboard</a>
+          </li>
         </ul>
         <ul class="navbar-nav nav-right my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-          <li class="nav-item">
-            <a class="nav-link" href="login.php">Login</a>
-          </li>
+          <?php if(isset($_SESSION['logged_in'])): ?>
+            <li class="nav-item">
+              <a class="nav-link" href="dashboard.php"><?php echo $_SESSION['nama']; ?></a>
+            </li>
+          <?php else: ?>
+            <li class="nav-item">
+              <a class="nav-link" href="login.php">Login</a>
+            </li>
+          <?php endif; ?>
         </ul>
       </div>
     </div>
