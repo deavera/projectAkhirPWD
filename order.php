@@ -3,7 +3,7 @@ session_start();
 include 'koneksi.php';
 
 if(!isset($_SESSION['id'])){
-    header('location: login.php');
+    header('location: order.php');
     exit();
 }
 
