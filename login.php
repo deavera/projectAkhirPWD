@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($data && password_verify($password, $data['password'])) {
         $_SESSION['logged_in'] = true;
         $_SESSION['id']        = $data['id'];
-        $_SESSION['nama']  = $data['nama'];
+        $_SESSION['nama']      = $data['nama'];
         $_SESSION['role']      = $data['role'];
         $_SESSION['email']     = $data['email'];
         $_SESSION['no_hp']     = $data['no_hp'];
@@ -50,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       <div class="collapse navbar-collapse" id="navbarScroll">
         <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
           <li class="nav-item">
-            <a class="nav-link active" href="home1.php">Home</a>
+            <a class="nav-link" href="home1.php">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="menu1.php">Menu</a>
@@ -61,7 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </ul>
         <ul class="navbar-nav nav-right my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
           <li class="nav-item">
-            <a class="nav-link" href="login.php">Login</a>
+            <a class="nav-link active" href="login.php">Login</a>
           </li>
         </ul>
       </div>
