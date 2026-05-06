@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Dessert</title>
-    <link rel="stylesheet" href="ubah.css">
+    <link rel="stylesheet" href="ubahM.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   </head>
   <body>
@@ -47,7 +47,6 @@
     </div>
   </div>
 
-  <!-- CUPCAKE -->
   <div class="container mt-4">
   <h2 class="text-center mb-4">Cupcake</h2>
   <div class="row">
@@ -89,7 +88,6 @@
   </div>
 </div>
 
-<!-- PUDDING -->
 <div class="container mt-4">
   <h2 class="text-center mb-4">Pudding</h2>
   <div class="row">
@@ -132,7 +130,6 @@
   </div>
 </div>
 
-<!-- CAKE -->
 <div class="container mt-4">
   <h2 class="text-center mb-4">Cake</h2>
   <div class="row">

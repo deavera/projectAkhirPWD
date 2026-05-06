@@ -9,8 +9,7 @@ include 'koneksi.php';
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Admin - Dessert</title>
-    <link rel="stylesheet" href="ubah.css">
-    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="ubahM.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   </head>
   <body>
@@ -50,89 +49,87 @@ include 'koneksi.php';
     </div>
   </nav>
 
-  <?php
-  $total_user    = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM users"));
-  $total_pesanan = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM pesanan"));
-  $total_pending = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM orders WHERE status='pending'"));
-  ?>
+  <div class="isi-halaman">
 
-  <div class="container mt-4">
-    <div class="row">
+    <?php
+    $total_user    = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM users"));
+    $total_pesanan = mysqli_num_rows(mysqli_query($koneksi, "SELECT * FROM pesanan"));
+    $query_pending = mysqli_query($koneksi, "SELECT * FROM pesanan WHERE status='pending'");
+    $total_pending = mysqli_num_rows($query_pending);
+    ?>
 
-      <div class="col-md-4 mb-4">
-        <div class="card kotak-stat text-center p-3">
-          <h2 class="angka-stat"><?php echo $total_user; ?></h2>
-          <p class="tulisan-stat">Total User</p>
+    <div class="container mt-4">
+      <div class="row">
+
+        <div class="col-md-4 mb-4">
+          <div class="card kotak-stat text-center p-3">
+            <h2 class="angka-stat"><?php echo $total_user; ?></h2>
+            <p class="tulisan-stat">Total User</p>
+          </div>
         </div>
-      </div>
 
-      <div class="col-md-4 mb-4">
-        <div class="card kotak-stat text-center p-3">
-          <h2 class="angka-stat"><?php echo $total_pesanan; ?></h2>
-          <p class="tulisan-stat">Total Pesanan</p>
+        <div class="col-md-4 mb-4">
+          <div class="card kotak-stat text-center p-3">
+            <h2 class="angka-stat"><?php echo $total_pesanan; ?></h2>
+            <p class="tulisan-stat">Total Pesanan</p>
+          </div>
         </div>
-      </div>
 
-      <div class="col-md-4 mb-4">
-        <div class="card kotak-stat text-center p-3">
-          <h2 class="angka-stat"><?php echo $total_pending; ?></h2>
-          <p class="tulisan-stat">Pesanan Pending</p>
+        <div class="col-md-4 mb-4">
+          <div class="card kotak-stat text-center p-3">
+            <h2 class="angka-stat"><?php echo $total_pending; ?></h2>
+            <p class="tulisan-stat">Pesanan Pending</p>
+          </div>
         </div>
-      </div>
 
+      </div>
     </div>
-  </div>
 
-  <div class="container mt-2 mb-5">
-    <h4 class="judul-tabel mb-3">Daftar Pesanan Masuk</h4>
-    <table class="table table-bordered table-hover">
-      <thead class="kepala-tabel">
-        <tr>
-          <th>No</th>
-          <th>Username</th>
-          <th>Produk</th>
-          <th>Jumlah</th>
-          <th>Total Harga</th>
-          <th>Tanggal Pesanan</th>
-          <th>Status</th>
-        </tr>
-      </thead>
-      <tbody>
-        <?php
-        $no = 1;
-        $query = mysqli_query($koneksi, "SELECT users.username, orders.nama_produk, orders.jumlah, orders.total_harga, orders.tanggal_pesanan, orders.status FROM orders INNER JOIN users ON orders.id_user = users.id");
-        if($query && mysqli_num_rows($query) > 0){
-          while($data = mysqli_fetch_assoc($query)){ ?>
+    <div class="container mt-2 mb-5">
+      <h4 class="judul-tabel mb-3">Daftar Pesanan Masuk</h4>
+      <table class="table table-bordered table-hover">
+        <thead class="kepala-tabel">
           <tr>
-            <td><?php echo $no++; ?></td>
-            <td><?php echo $data['username']; ?></td>
-            <td><?php echo $data['nama_produk']; ?></td>
-            <td><?php echo $data['jumlah']; ?></td>
-            <td>Rp <?php echo number_format($data['total_harga'], 0, ',', '.'); ?></td>
-            <td><?php echo $data['tanggal_pesanan']; ?></td>
-            <td>
-              <?php
-              $status = $data['status'];
-              if($status == 'pending'){
-                echo '<span class="label-pending">' . $status . '</span>';
-              } else if($status == 'confirmed'){
-                echo '<span class="label-confirmed">' . $status . '</span>';
-              } else if($status == 'done'){
-                echo '<span class="label-done">' . $status . '</span>';
-              } else {
-                echo $status;
-              }
-              ?>
-            </td>
+            <th>No</th>
+            <th>Nama User</th>
+            <th>Produk</th>
+            <th>Jumlah</th>
+            <th>Total Harga</th>
+            <th>Tanggal Pesanan</th>
+            <th>Status</th>
           </tr>
-          <?php }
-        } else { ?>
-          <tr>
-            <td colspan="7" class="text-center">Belum ada pesanan masuk.</td>
-          </tr>
-        <?php } ?>
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+          <?php
+          $no = 1;
+          $query = mysqli_query($koneksi, "SELECT users.nama, pesanan.nama_produk, pesanan.jumlah, pesanan.total_bayar, pesanan.tanggal, pesanan.status FROM pesanan INNER JOIN users ON pesanan.user_id = users.id");
+          if(mysqli_num_rows($query) > 0){
+            while($data = mysqli_fetch_assoc($query)){ ?>
+            <tr>
+              <td><?php echo $no++; ?></td>
+              <td><?php echo $data['nama']; ?></td>
+              <td><?php echo $data['nama_produk']; ?></td>
+              <td><?php echo $data['jumlah']; ?></td>
+              <td>Rp <?php echo $data['total_bayar']; ?></td>
+              <td><?php echo $data['tanggal']; ?></td>
+              <td><?php echo $data['status']; ?></td>
+            </tr>
+            <?php }
+          } else { ?>
+            <tr>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>Belum ada pesanan masuk.</td>
+            </tr>
+          <?php } ?>
+        </tbody>
+      </table>
+    </div>
+
   </div>
 
   <footer class="footer">

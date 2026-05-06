@@ -16,7 +16,7 @@ $keterangan = $_GET['keterangan'];
 
 <!doctype html>
 <html lang="en">
-<head>
+<head> 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Order - Dessert</title>
@@ -68,8 +68,7 @@ $keterangan = $_GET['keterangan'];
       <p><?php echo $keterangan; ?></p>
       <hr>
 
-      
-      <?php if(isset($_POST['jumlah'])){
+    <?php if(isset($_POST['jumlah'])){
     $jumlah = $_POST['jumlah'];
     $total = $harga * $jumlah;
 
@@ -117,14 +116,12 @@ $keterangan = $_GET['keterangan'];
 
     </div>
   </div>
-</div>
 <footer class="footer">
     <div class="container text-center">
         <p>&copy; 2026 Dessert. All rights reserved.</p>
     </div>
 </footer>
 
-<!-- MODAL STRUK (Bootstrap) -->
 <?php if(isset($_POST['jumlah'])){ ?>
 <div class="modal fade" id="modalStruk" tabindex="-1" aria-labelledby="labelStruk" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
