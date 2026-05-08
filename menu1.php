@@ -28,9 +28,6 @@ session_start();
           <li class="nav-item">
             <a class="nav-link" href="about.php">About</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="dashboard.php">Dashboard</a>
-          </li>
         </ul>
         <ul class="navbar-nav nav-right my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
           <?php if(isset($_SESSION['logged_in'])): ?>

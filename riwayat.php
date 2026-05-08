@@ -41,16 +41,16 @@ $query_orders = mysqli_query($koneksi, "SELECT * FROM pesanan WHERE user_id = '$
           </li>
         </ul>
         <ul class="navbar-nav nav-right my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-          <?php if($_SESSION['role'] == 'admin'): ?>
-            <li class="nav-item">
-              <a class="nav-link" href="admin.php">Admin</a>
-            </li>
-          <?php else: ?>
-            <li class="nav-item">
-              <a class="nav-link" href="riwayat.php">Riwayat Pesanan</a>
-            </li>
-          <?php endif; ?>
-        </ul>
+            <?php if(isset($_SESSION['logged_in'])): ?>
+              <li class="nav-item">
+                <a class="nav-link" href="dashboard.php"><?php echo $_SESSION['nama']; ?></a>
+              </li>
+            <?php else: ?>
+              <li class="nav-item">
+                <a class="nav-link" href="login.php">Login</a>
+              </li>
+            <?php endif; ?>
+          </ul>
 
       </div>
     </div>
@@ -58,41 +58,37 @@ $query_orders = mysqli_query($koneksi, "SELECT * FROM pesanan WHERE user_id = '$
 
 
 <section class="dashboard">
-    <p>Selamat datang kembali!</p>
-    <h3>Halo, <?php echo $_SESSION['nama']; ?>!</h3>
+    <p>Lihat riwayat pesanan</p>
+    <h3>Terima kasih, <?php echo $_SESSION['nama']; ?>!</h3>
 </section>
 
 <section class="informasi">
   <div class="container text-center">
   <div class="row align-items-stretch">
     <div class="col-md-6">
-      <div class="card p-3 h-100">
-        <h5>Informasi Akun</h5>
-        <table class="table">
-        <tbody>
-          <tr>
-              <td>Nama</td>
-              <td class="text-end"><?php echo $_SESSION['nama']; ?></td>
-          </tr>
-          <tr>
-              <td>Email</td>
-              <td class="text-end"><?php echo $_SESSION['email']; ?></td>
-          </tr>
-          <tr>
-              <td>No. HP</td>
-              <td class="text-end"><?php echo $_SESSION['no_hp']; ?></td>
-          </tr>
-          <tr>
-              <td>Alamat</td>
-              <td class="text-end"><?php echo $_SESSION['alamat']; ?></td>
-          </tr>
-        </tbody>
-      </table>
+          <div class="card p-3 h-100">
+            <h5>Riwayat Pesanan</h5>
+            <?php if (mysqli_num_rows($query_orders) > 0): ?>
+                <?php while ($order = mysqli_fetch_assoc($query_orders)): ?>
+                    <div class="d-flex justify-content-between align-items-center border-bottom py-2">
+                        <div>
+                            <strong><?php echo $order['nama_produk']; ?></strong><br>
+                            <small class="text-muted">
+                                <?php echo $order['jumlah']; ?>x &middot; Rp <?php echo number_format($order['total_bayar'], 0, ',', '.'); ?>
+                            </small>
+                        </div>
+                        <small class="text-muted"><?php echo $order['tanggal']; ?></small>
+                    </div>
+                <?php endwhile; ?>
+            <?php else: ?>
+                <p class="text-muted">Belum ada pesanan.</p>
+            <?php endif; ?>
+ 
+          </div>
+        </div>
+    
       </div>
     </div>
-
-    </div>
-  </div>
 </section>
 
 <section class="pilihan">

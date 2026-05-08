@@ -7,6 +7,11 @@ if(!isset($_SESSION['id'])){
     exit();
 }
 
+if(isset($_SESSION['role']) && $_SESSION['role'] == 'admin'){
+    header('location: admin.php');
+    exit();
+}
+
 $nama = $_GET['nama'];
 $harga = $_GET['harga'];
 $gambar = $_GET['gambar'];
@@ -41,15 +46,18 @@ $keterangan = $_GET['keterangan'];
         <li class="nav-item">
           <a class="nav-link" href="about.php">About</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="dashboard.php">Dashboard</a>
-          </li>
       </ul>
       <ul class="navbar-nav nav-right my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-        <li class="nav-item">
-          <a class="nav-link" href="login.php">Login</a>
-        </li>
-      </ul>
+          <?php if(isset($_SESSION['logged_in'])): ?>
+            <li class="nav-item">
+              <a class="nav-link" href="dashboard.php"><?php echo $_SESSION['nama']; ?></a>
+            </li>
+          <?php else: ?>
+            <li class="nav-item">
+              <a class="nav-link" href="login.php">Login</a>
+            </li>
+          <?php endif; ?>
+        </ul>
     </div>
   </div>
 </nav>
@@ -108,7 +116,7 @@ $keterangan = $_GET['keterangan'];
           <button type="button" class="menu-btn" data-bs-toggle="modal" data-bs-target="#modalStruk">
             Lihat Struk
           </button>
-          <a href="dashboard.php" class="menu-btn mt-2">Lihat Pesanan Saya</a>
+          <a href="riwayat.php" class="menu-btn mt-2">Lihat Pesanan Saya</a>
 
         <?php } elseif($gagal){ ?>
           <div class="alert alert-danger">

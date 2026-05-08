@@ -36,7 +36,7 @@ if(!isset($_SESSION['logged_in']) || $_SESSION['role'] !== 'admin'){
           <li class="nav-item">
             <a class="nav-link" href="about.php">About</a>
           </li>
-          </ul>
+        </ul>
           <ul class="navbar-nav nav-right my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
             <li class="nav-item">
               <a class="nav-link active" href="admin.php">Admin</a>
