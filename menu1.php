@@ -240,11 +240,11 @@ session_start();
       <div class="card h-100">
         <img src="ice1.jpeg" class="card-img-top">
         <div class="card-body text-center">
-          <h5 class="card-title">Matcha Vanilla Sundae</h5>
-          <p class="fw-bold text-danger">Rp 28.000</p>
-          <p>Perpaduan ice cream vanilla dan matcha creamy dengan topping kacang almond yang crunchy.</p>
+          <h5 class="card-title">Lotus Banana Dessert</h5>
+          <p class="fw-bold text-danger">Rp 30.000</p>
+          <p>Dessert creamy dengan potongan pisang, whipped cream, dan topping lotus biscoff yang manis legit.</p>
           <?php if(isset($_SESSION['id'])){ ?>
-            <a href="order.php?nama=Matcha Vanilla Sundae&harga=28000&gambar=ice1.jpeg&keterangan=Perpaduan ice cream vanilla dan matcha creamy dengan topping kacang almond yang crunchy." class="menu-btn">Beli</a>
+            <a href="order.php?nama=Lotus Banana Dessert&harga=30000&gambar=ice1.jpeg&keterangan=Dessert creamy dengan potongan pisang, whipped cream, dan topping lotus biscoff yang manis legit." class="menu-btn">Beli</a>
           <?php } else { ?>
             <a href="login.php" class="menu-btn">Beli</a>
           <?php } ?>
@@ -256,11 +256,11 @@ session_start();
       <div class="card h-100">
         <img src="ice3.jpeg" class="card-img-top">
         <div class="card-body text-center">
-          <h5 class="card-title">Lotus Banana Dessert</h5>
-          <p class="fw-bold text-danger">Rp 30.000</p>
-          <p>Dessert creamy dengan potongan pisang, whipped cream, dan topping lotus biscoff yang manis legit.</p>
+          <h5 class="card-title">Matcha Vanilla Sundae</h5>
+          <p class="fw-bold text-danger">Rp 28.000</p>
+          <p>Perpaduan ice cream vanilla dan matcha creamy dengan topping kacang almond yang crunchy.</p>
           <?php if(isset($_SESSION['id'])){ ?>
-            <a href="order.php?nama=Lotus Banana Dessert&harga=30000&gambar=ice3.jpeg&keterangan=Dessert creamy dengan potongan pisang, whipped cream, dan topping lotus biscoff yang manis legit." class="menu-btn">Beli</a>
+            <a href="order.php?nama=Matcha Vanilla Sundae&harga=28000&gambar=ice3.jpeg&keterangan=Perpaduan ice cream vanilla dan matcha creamy dengan topping kacang almond yang crunchy." class="menu-btn">Beli</a>
           <?php } else { ?>
             <a href="login.php" class="menu-btn">Beli</a>
           <?php } ?>
