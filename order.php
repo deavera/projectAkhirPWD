@@ -182,11 +182,11 @@ $keterangan = $_GET['keterangan'];
           </tr>
           <tr>
             <td>Diskon</td>
-            <td>- Rp <?php echo $diskon; ?></td>
+            <td><b class="text-danger">- Rp <?php echo $diskon; ?></b></td>
           </tr>
           <tr>
             <td><b>Total Bayar</b></td>
-            <td><b class="text-danger">Rp <?php echo $bayar; ?></b></td>
+            <td><b>Rp <?php echo $bayar; ?></b></td>
           </tr>
         </table>
         <?php if($diskon > 0){ ?>
