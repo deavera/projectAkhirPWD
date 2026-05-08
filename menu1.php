@@ -217,6 +217,59 @@ session_start();
   </div>
 </div>
 
+<div class="container mt-4">
+  <h2 class="text-center mb-4">Ice Cream</h2>
+  <div class="row">
+    <div class="col-md-4 mb-4">
+      <div class="card h-100">
+        <img src="ice2.jpeg" class="card-img-top">
+        <div class="card-body text-center">
+          <h5 class="card-title">Oreo Berry Ice Cream</h5>
+          <p class="fw-bold text-danger">Rp 25.000</p>
+          <p>Ice cream creamy dengan topping oreo crumble dan buah berry segar yang manis dan dingin.</p>
+          <?php if(isset($_SESSION['id'])){ ?>
+            <a href="order.php?nama=Oreo Berry Ice Cream&harga=32000&gambar=ice2.jpeg&keterangan=Ice cream creamy dengan topping oreo crumble dan buah berry segar yang manis dan dingin." class="menu-btn">Beli</a>
+          <?php } else { ?>
+            <a href="login.php" class="menu-btn">Beli</a>
+          <?php } ?>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card h-100">
+        <img src="ice1.jpeg" class="card-img-top">
+        <div class="card-body text-center">
+          <h5 class="card-title">Matcha Vanilla Sundae</h5>
+          <p class="fw-bold text-danger">Rp 28.000</p>
+          <p>Perpaduan ice cream vanilla dan matcha creamy dengan topping kacang almond yang crunchy.</p>
+          <?php if(isset($_SESSION['id'])){ ?>
+            <a href="order.php?nama=Matcha Vanilla Sundae&harga=28000&gambar=ice1.jpeg&keterangan=Perpaduan ice cream vanilla dan matcha creamy dengan topping kacang almond yang crunchy." class="menu-btn">Beli</a>
+          <?php } else { ?>
+            <a href="login.php" class="menu-btn">Beli</a>
+          <?php } ?>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 mb-4">
+      <div class="card h-100">
+        <img src="ice3.jpeg" class="card-img-top">
+        <div class="card-body text-center">
+          <h5 class="card-title">Lotus Banana Dessert</h5>
+          <p class="fw-bold text-danger">Rp 30.000</p>
+          <p>Dessert creamy dengan potongan pisang, whipped cream, dan topping lotus biscoff yang manis legit.</p>
+          <?php if(isset($_SESSION['id'])){ ?>
+            <a href="order.php?nama=Lotus Banana Dessert&harga=30000&gambar=ice3.jpeg&keterangan=Dessert creamy dengan potongan pisang, whipped cream, dan topping lotus biscoff yang manis legit." class="menu-btn">Beli</a>
+          <?php } else { ?>
+            <a href="login.php" class="menu-btn">Beli</a>
+          <?php } ?>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <footer class="footer">
     <div class="container text-center">
         <p>&copy; 2026 Dessert. All rights reserved.</p>
