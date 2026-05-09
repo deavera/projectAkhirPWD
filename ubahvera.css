@@ -42,6 +42,7 @@
 .about {
     padding: 50px;
     background-color: #FBEAD6;
+    padding-bottom: 170px;
 }
 
 .about h1 {
@@ -60,7 +61,6 @@
 }
 
 .best {
-    background-color: #FBEAD6;
     padding: 50px;
 }
 
@@ -85,21 +85,22 @@
 }
 
 .button-menu {
-    background-color: #FBEAD6;
     padding-top: 30px;
     padding-bottom: 70px;
     text-align: center;
 }
 
-button.btn.btn-custom {
+.btn.btn-custom {
+    background-color: #C87D87;
     border-color: #C87D87;
-    color: #C87D87;
-    font-weight: bold;
+    color: white;
+    transition: 0.3s;
 }
 
-button.btn.btn-custom:hover {
-    background-color: #C87D87;
-    color: #FBEAD6;
+.btn.btn-custom:hover {
+    background-color: #6e4349;
+    border-color: #6e4349;
+    transform: scale(1.05);
 }
 
 

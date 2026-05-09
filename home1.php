@@ -95,7 +95,7 @@
     </div>
     <div class="col-md-6">
       <p>Sejak 2018, kami menghadirkan pengalaman dessert yang tidak hanya lezat, tetapi juga berkesan. Dengan perpaduan bahan berkualitas, resep pilihan, dan sentuhan kreativitas, setiap produk kami dibuat untuk memberikan kepuasan terbaik. Kepercayaan pelanggan selama bertahun-tahun menjadi bukti komitmen kami dalam menjaga kualitas dan menghadirkan yang terbaik di setiap sajian.</p>
-      <a href="https://www.startfriday.asia/ideas/top-toko-bakery-terkenal-di-indonesia-yang-wajib-fripipel-coba" class="btn" style="background-color: #C87D87; color: white;">Our Story</a>
+      <a href="about.php" class="btn btn-custom">About Us</a>
     </div>
   </div>
 </div>
@@ -145,7 +145,7 @@
 </section>
 
 <section class="button-menu">
-  <button type="button" class="btn btn-custom">Explore Menu</button>
+  <a href="menu1.php" class="btn btn-custom">Explore menu</a>
 </section>
 
 <footer class="footer">
