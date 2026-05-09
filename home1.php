@@ -107,37 +107,37 @@
   <div class="row row-cols-1 row-cols-md-4 g-4">
   <div class="col">
     <div class="card shadow">
-      <img src="cake1.jpg" class="card-img-top" alt="cake1">
+      <img src="cup3.jpeg" class="card-img-top" alt="cup3">
       <div class="card-body">
-        <h5 class="card-title">Cheese Cake</h5>
-        <p class="card-text">Favorit karena teksturnya lembut dan creamy dengan rasa yang rich namun tetap seimbang.</p>
+        <h5 class="card-title">Sweet Sprinkle Cupcake</h5>
+        <p class="card-text">Cupcake lembut dengan buttercream creamy dan topping strawberry crumble.</p>
       </div>
     </div>
   </div>
   <div class="col">
     <div class="card shadow">
-      <img src="icecream1.jpg" class="card-img-top" alt="icecream1">
+      <img src="puding1.jpeg" class="card-img-top" alt="puding1">
       <div class="card-body">
-        <h5 class="card-title">Cookies Ice Cream</h5>
-        <p class="card-text">Best seller karena perpaduan crunchy cookies dan ice cream dingin yang bikin nagih di setiap gigitan.</p>
+        <h5 class="card-title">Classic Caramel Pudding</h5>
+        <p class="card-text">Puding susu lembut dengan saus karamel yang manis.</p>
       </div>
     </div>
   </div>
   <div class="col">
     <div class="card shadow">
-      <img src="pudding1.jpg" class="card-img-top" alt="pudding1">
+      <img src="cake2.jpeg" class="card-img-top" alt="cake2">
       <div class="card-body">
-        <h5 class="card-title">Strawberry Pudding</h5>
-        <p class="card-text"> Disukai karena rasanya segar, manis alami, dan teksturnya yang ringan di mulut.</p>
+        <h5 class="card-title">Fruit Cheesecake Slice</h5>
+        <p class="card-text">Cheesecake lembut dengan topping buah segar dan creamy.</p>
       </div>
     </div>
   </div>
   <div class="col">
     <div class="card shadow">
-      <img src="icecream1.jpg" class="card-img-top" alt="icecream1">
+      <img src="ice1.jpeg" class="card-img-top" alt="ice1">
       <div class="card-body">
-        <h5 class="card-title">Cookies Ice Cream</h5>
-        <p class="card-text">Best seller karena perpaduan crunchy cookies dan ice cream dingin yang bikin nagih di setiap gigitan.</p>
+        <h5 class="card-title">Lotus Banana Dessert</h5>
+        <p class="card-text">Dessert creamy dengan potongan pisang, whipped cream, dan topping lotus biscoff yang manis legit.</p>
       </div>
     </div>
   </div>
