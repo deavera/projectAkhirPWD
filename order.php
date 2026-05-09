@@ -68,6 +68,9 @@ $keterangan = $_GET['keterangan'];
 
       <div class="col-md-6 text-center">
         <img src="<?php echo $gambar; ?>" class="img-fluid gambar-order">
+        <div class="alert alert-warning mt-3">
+          Belanja di atas Rp 50.000 dapat diskon Rp 5.000!
+        </div>
       </div>
 
       <div class="col-md-6 mt-3">
